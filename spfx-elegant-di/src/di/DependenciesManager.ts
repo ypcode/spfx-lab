@@ -17,7 +17,6 @@ export class DependenciesManager {
 		return new Promise((resolve, reject) => {
 			serviceScopeConfiguration(rootServiceScope)
 				.then((usedScope) => {
-					console.log('DependenciesManager configured serviceScope: ', usedScope);
                     this.serviceScope = usedScope;
                     this.serviceScope.whenFinished(() => {
                         // Inject all the already known dependency references

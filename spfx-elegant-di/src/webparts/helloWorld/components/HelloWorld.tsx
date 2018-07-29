@@ -31,10 +31,11 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, IHello
 					<div className={styles.row}>
 						<div className={styles.column}>
 							<span className={styles.title}>Welcome to Dependency Injection!</span>
+							<p>{this.props.description}</p>
 							<p style={{ 'backgroundColor': bgColor }} className={styles.subTitle}>
 								Result from service: {hello}.
 							</p>
-							<DefaultButton onClick={() => this._onNewComponentRequested()} />
+							<DefaultButton onClick={() => this._onNewComponentRequested()} text='Create another component' />
               {this.state.newComponent && <AnotherComponent />}
 						</div>
 					</div>
